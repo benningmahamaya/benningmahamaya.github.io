@@ -1,0 +1,270 @@
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: rgb(255, 246, 227);
+    margin: 0%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'topnav topnav topnav topnav topnav topnav'
+    'me me me me desc desc'
+    'footer footer footer footer footer footer';
+}
+
+.header {
+    grid-area: header;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 500px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+}
+
+.nav {
+    float: left;
+    grid-area: nav;
+    overflow: hidden;
+}
+
+.me {
+    grid-area: me;
+    text-align: center;
+    padding: 10px;
+    background-color: #5f7750;
+}
+
+.desc {
+    grid-area: desc;
+    background-color: #5f7750;
+    text-align: left;
+    color: white;
+    padding: 30px;
+}
+
+.description {
+    text-align: left;
+    margin-bottom: 0%;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'header header header header header header'
+        'topnav topnav topnav topnav topnav topnav'
+        'me me me me desc desc'
+        'footer footer footer footer footer footer';
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+        'header header header header header header'
+        'topnav topnav topnav topnav topnav topnav'
+        'me me me me me me'
+        'desc desc desc desc desc desc'
+        'footer footer footer footer footer footer';
+    }
+
+    .header {
+        background-color: rgb(255, 246, 227);
+        text-align: left;
+        font-size: 35px;
+        color: white;
+        grid-area: header;
+        padding: 40px 0 40px 40px;
+    }
+
+    .nav ul li {
+        float: left;
+        padding: 10px;
+    }
+
+    .nav a {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .nav .icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav .responsive {
+        position: relative;
+        padding: 5px;
+    }
+
+    .nav .responsive .icon {
+        position: absolute;
+        right: 20;
+        top: 8;
+    }
+
+    .nav .responsive a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #ffc933;
+    font-weight:bold;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    padding: 10px;
+}
+
+li a:hover {
+    background-color: #ff5d31;
+    color: white;
+}
+
+.content {
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    text-align: justify;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 0%;
+}
+
+h3 {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffc933;
+}
+
+.pfooter {
+    text-align: center;
+}
+
+.cc {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 14px;
+    height: 14px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #ffc933;
+    grid-area: topnav;
+    position: sticky;
+    top: 0px;
+  }
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.7s;
+  }
+  
+.topnav a:hover {
+    background-color: #ff5d31;
+    color: white;
+    margin-bottom: 0px;
+  }
+  
+.topnav a.active {
+    background-color: #7571c6;
+    color: white;
+  }
+  
+.topnav .icon {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+button {
+    background-color: #ffd7d7;
+    padding: 5px;
+    border: none;
+    position: relative;
+    animation-name: button-anim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-out;
+}
+
+@keyframes button-anim {
+    from {background-color: #7571c6; left: 1000px; border-radius: 50%; font-size: 0;}
+    to {background-color: #ffd7d7; left: 0px;}
+}

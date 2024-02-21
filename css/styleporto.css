@@ -1,0 +1,251 @@
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: rgb(255, 246, 227);
+    margin: 0%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'topnav topnav topnav topnav topnav topnav'
+    'left left middle middle right right'
+    'left2 left2 middle2 middle2 right2 right2'
+    'footer footer footer footer footer footer';
+}
+
+.header {
+    grid-area: header;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 500px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 500px;
+}
+
+.nav {
+    float: left;
+    grid-area: nav;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'header header header header header header'
+        'topnav topnav topnav topnav topnav topnav'
+        'left left middle middle right right'
+        'footer footer footer footer footer footer';
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+        'header header header header header header'
+        'topnav topnav topnav topnav topnav topnav'
+        'left left left left left left'
+        'middle middle middle middle middle middle'
+        'right right right right right right'
+        'footer footer footer footer footer footer';
+    }
+
+    .header {
+        background-color: rgb(255, 246, 227);
+        text-align: left;
+        font-size: 35px;
+        color: white;
+        grid-area: header;
+        padding: 40px 0 40px 40px;
+    }
+}
+/*
+    .nav ul li {
+        float: left;
+        padding: 10px;
+    }
+
+    .nav a {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .nav .icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav .responsive {
+        position: relative;
+        padding: 5px;
+    }
+
+    .nav .responsive .icon {
+        position: absolute;
+        right: 20;
+        top: 8;
+    }
+
+    .nav .responsive a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #ffc933;
+    font-weight:bold;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    padding: 10px;
+}
+
+li a:hover {
+    background-color: #ff5d31;
+    color: white;
+}
+*/
+
+.left, .middle, .right {
+    text-align: center;
+}
+
+.left {
+    grid-area: left;
+}
+
+.middle {
+    grid-area: middle;
+}
+
+.right {
+    grid-area: right;
+}
+
+.left2 {
+    grid-area: left2;
+    text-align: center;
+}
+
+.middle2 {
+    grid-area: middle2;
+    text-align: center;
+}
+
+.right2 {
+    grid-area: right2;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #ffc933;
+    font-weight: bold;
+}
+
+h2 {
+    background-color: #ff5d31;
+    color: white;
+    padding: 10px;
+    margin-top: 0%;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    text-align: justify;
+    text-align: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ffc933;
+    grid-area: topnav;
+    position: sticky;
+    top: 0px;
+  }
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.7s;
+  }
+  
+.topnav a:hover {
+    background-color: #ff5d31;
+    color: white;
+    margin-bottom: 0px;
+  }
+  
+.topnav a.active {
+    background-color: #7571c6;
+    color: white;
+  }
+  
+.topnav .icon {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
